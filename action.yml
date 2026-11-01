@@ -1,5 +1,5 @@
 name: Set up Review Router
-description: Propose a human-authenticated GitHub-to-Slack Review Router connection.
+description: Route GitHub pull requests to Slack channels and reviewers with human-confirmed setup.
 author: Tenpace
 branding:
   icon: git-pull-request

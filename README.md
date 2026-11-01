@@ -6,6 +6,28 @@ Create a GitHub-to-Slack Review Router connection from a workflow or AI coding s
 
 The Action never receives GitHub App credentials, Slack OAuth tokens, provider authorization codes, or the human's Tenpace session.
 
+## Set up from your coding assistant (MCP)
+
+Connect the hosted server, then ask it to propose the GitHub-to-Slack route:
+
+```sh
+claude mcp add --transport http review-router https://api.tenpace.com/v1/review-router/mcp
+```
+
+> Set up Review Router for OWNER/REPO in #code-reviews, with reviewer mentions.
+
+Open the returned browser link, confirm the exact plan, and complete GitHub and Slack authorization. Verify the test message, then check that a real matching PR arrives. This MCP configures routing; it does **not** review code or grant unrestricted provider access.
+
+**[MCP quickstart: Claude Code, Cursor, troubleshooting](https://review-router.tenpace.com/docs/mcp)** · [Illustrated workflow demo](https://review-router.tenpace.com/demo) · [Free review-health check](https://review-router.tenpace.com/tools/pr-review-health)
+
+The canonical registry name is `io.github.tenpace-app/review-router`. Use the full `/v1/review-router/mcp` URL above. The shorter `/mcp` URL is reserved for a separate gateway, not direct clients.
+
+## Reproduce a public review-health audit
+
+This repository includes a [read-only example workflow](.github/workflows/review-health.yml). Open [its runs](https://github.com/tenpace-app/review-router-setup/actions/workflows/review-health.yml) to see the job summary and downloadable JSON. Maintainers can run it on demand; other teams can copy the workflow into their own repository. It does not create a route, post a comment, or send private repository data to Tenpace.
+
+Small demo repositories may not have enough review history for every metric. Missing samples are not proof of a healthy or unhealthy team. Add the generated badge only if you want to publish your repository's live report.
+
 ## Use the Action
 
 Create `.github/workflows/review-router-setup.yml`:
