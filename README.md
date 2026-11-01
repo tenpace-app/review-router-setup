@@ -6,6 +6,22 @@ Create a GitHub-to-Slack Review Router connection from a workflow or AI coding s
 
 The Action never receives GitHub App credentials, Slack OAuth tokens, provider authorization codes, or the human's Tenpace session.
 
+## Set up from your coding assistant (MCP)
+
+Connect the hosted server, then ask it to propose the GitHub-to-Slack route:
+
+```sh
+claude mcp add --transport http review-router https://api.tenpace.com/v1/review-router/mcp
+```
+
+> Set up Review Router for OWNER/REPO in #code-reviews, with reviewer mentions.
+
+Open the returned browser link, confirm the exact plan, and complete GitHub and Slack authorization. Verify the test message, then check that a real matching PR arrives. This MCP configures routing; it does **not** review code or grant unrestricted provider access.
+
+**[MCP quickstart: Claude Code, Cursor, troubleshooting](https://review-router.tenpace.com/docs/mcp)** · [Illustrated workflow demo](https://review-router.tenpace.com/demo) · [Free review-health check](https://review-router.tenpace.com/tools/pr-review-health)
+
+The canonical registry name is `io.github.tenpace-app/review-router`. Use the full `/v1/review-router/mcp` URL above. The shorter `/mcp` URL is reserved for a separate gateway, not direct clients.
+
 ## Use the Action
 
 Create `.github/workflows/review-router-setup.yml`:
