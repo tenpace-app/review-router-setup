@@ -15,3 +15,5 @@ Canonical machine contracts:
 - MCP: https://api.tenpace.com/v1/review-router/mcp
 - Agent descriptor: https://api.tenpace.com/.well-known/tenpace-agent.json
 - Full Markdown guide: https://review-router.tenpace.com/docs/agent-setup.md
+
+Billing is a separate human action. If setup returns `awaiting_billing`, show its billing URL to the workspace owner/admin. Routing requires active access: 30 days free with a card, then $5/developer/month or $50/developer/year. Never collect card details or authorize payment through an agent. The audit stays free; MCP is included with Team.
