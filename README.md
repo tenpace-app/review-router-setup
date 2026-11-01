@@ -6,6 +6,14 @@ Create a GitHub-to-Slack Review Router connection from a workflow or AI coding s
 
 The Action never receives GitHub App credentials, Slack OAuth tokens, provider authorization codes, or the human's Tenpace session.
 
+## Routing plans
+
+Review Router Team includes MCP setup: **30 days free with a card**, then **$5 per developer/month** or **$50 per developer/year**. The subscription renews automatically; cancel in Billing before the trial ends to avoid a charge. There is no permanent free routing plan.
+
+The **public review-health audit remains free** and does not require a card. [Review current plan details](https://review-router.tenpace.com/#plans).
+
+If setup returns `awaiting_billing`, an owner or admin opens the returned billing link and completes secure checkout in the browser. Never give card details to a coding assistant. The Action and MCP server cannot authorize charges.
+
 ## Set up from your coding assistant (MCP)
 
 Connect the hosted server, then ask it to propose the GitHub-to-Slack route:
