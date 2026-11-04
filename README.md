@@ -16,6 +16,8 @@ If setup returns `awaiting_billing`, an owner or admin opens the returned billin
 
 ## Set up from your coding assistant (MCP)
 
+[![Tenpace Review Router MCP server](https://mcprush.com/badge/tenpace-app-tenpace-review-router-mcp/card.svg)](https://mcprush.com/to/tenpace-app-tenpace-review-router-mcp?ref=badge)
+
 Connect the hosted server, then ask it to propose the GitHub-to-Slack route:
 
 ```sh
