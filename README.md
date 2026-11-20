@@ -6,14 +6,6 @@ Create a GitHub-to-Slack Review Router connection from a workflow or AI coding s
 
 The Action never receives GitHub App credentials, Slack OAuth tokens, provider authorization codes, or the human's Tenpace session.
 
-## Routing plans
-
-Review Router Team includes MCP setup: **30 days free with a card**, then **$5 per developer/month** or **$50 per developer/year**. The subscription renews automatically; cancel in Billing before the trial ends to avoid a charge. There is no permanent free routing plan.
-
-The **public review-health audit remains free** and does not require a card. [Review current plan details](https://review-router.tenpace.com/#plans).
-
-If setup returns `awaiting_billing`, an owner or admin opens the returned billing link and completes secure checkout in the browser. Never give card details to a coding assistant. The Action and MCP server cannot authorize charges.
-
 ## Set up from your coding assistant (MCP)
 
 [![Tenpace Review Router MCP server](https://mcprush.com/badge/tenpace-app-tenpace-review-router-mcp/card.svg)](https://mcprush.com/to/tenpace-app-tenpace-review-router-mcp?ref=badge)
@@ -28,7 +20,7 @@ claude mcp add --transport http review-router https://api.tenpace.com/v1/review-
 
 Open the returned browser link, confirm the exact plan, and complete GitHub and Slack authorization. Verify the test message, then check that a real matching PR arrives. This MCP configures routing; it does **not** review code or grant unrestricted provider access.
 
-**[MCP quickstart: Claude Code, Cursor, troubleshooting](https://review-router.tenpace.com/docs/mcp)** · [Illustrated workflow demo](https://review-router.tenpace.com/demo) · [Free review-health check](https://review-router.tenpace.com/tools/pr-review-health)
+**[MCP quickstart: Claude Code, Cursor, troubleshooting](https://review-router.tenpace.com/docs/mcp)** · [Illustrated workflow demo](https://review-router.tenpace.com/demo) · [Review-health check](https://review-router.tenpace.com/tools/pr-review-health)
 
 The canonical registry name is `io.github.tenpace-app/review-router`. Use the full `/v1/review-router/mcp` URL above. The shorter `/mcp` URL is reserved for a separate gateway, not direct clients.
 
